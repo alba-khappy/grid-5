@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f1f3fe;
+    color: #3c425f;
+}
+
+.body--container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 80px 1fr 100px;
+}
+
+.header {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    height: 80px;
+}
+
+.main {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.nav {
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 24px 30px;
+}
+
+.nav__li {
+    padding: 20px 30px;
+}
+
+.nav__a {
+    display: flex;
+}
+
+.nav__a--setting {
+    display: flex;
+}
+
+/*main*/
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 140px 300px;
+    gap: 20px;
+    grid-template-areas:
+        "s s s c"
+        "o o o c"
+        "v v pm c";
+    padding: 30px;
+}
+
+.swiper {
+    grid-area: s;
+    background-image: url("../images/bb.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.main__ul-offer {
+    grid-area: o;
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    column-gap: 20px;
+}
+
+.main__li-offer {
+    display: grid;
+    background-color: #ffffff;
+    padding: 20px 30px;
+}
+
+.main__offer-h2 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.main__offer-p-about {
+    font-weight: 300;
+}
+
+.main__offer-p-date {
+    color: #0bc4cf;
+}
+
+.main__offer-btn {
+    justify-self: end;
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    color: #576bcc;
+    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
+}
+
+.playlist {
+    background: #FFFFFF;
+    padding: 20px 30px;
+}
+
+/*contacts*/
+
+.contacts {
+    grid-area: c;
+    background-color: #ffffff;
+    padding: 20px 30px;
+}
+
+.contacts--h2 {
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 1px solid #e4e8fc;
+}
+
+.video {
+    grid-area: v;
+}
+
+.play-menu {
+    grid-area: pm;
+}
+
+/*footer*/
+
+.footer {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    grid-area: "footer";
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 30px;
+    min-height: 60px;
+    background-color: #3c425f;
+}

@@ -1,0 +1,96 @@
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= "Grid-5"
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+    link(rel='stylesheet', href='./main.css', type='text/css')
+
+  body 
+    div.body--container.container 
+      nav.nav 
+        a(href="").nav--logo 
+          img(src="./images/logo.svg", alt="")
+        ul.nav__ul  
+          li.nav__li
+              a(href="").nav__a 
+                  img(src="./images/m1.svg", alt="")
+                  p Кабинет ученика
+          li.nav__li
+              a(href="").nav__a
+                  img(src="./images/m2.svg", alt="")
+                  p Учебный класс 
+          li.nav__li
+              a(href="").nav__a 
+                  img(src="./images/m3.svg", alt="")
+                  p Методичка
+          li.nav__li
+              a(href="").nav__a
+                  img(src="./images/m4.svg", alt="")
+                  p Домашняя работа 
+          li.nav__li
+              a(href="").nav__a
+                  img(src="./images/m5.svg", alt="")
+                  p Экзамены
+        a(href="").nav__a--setting
+          img(src="./images/setting.svg", alt="")
+          p Настройки
+
+      header.header 
+        form(action="#", method="GET").search
+          label(for="") Поле поиска
+          input(type="text" name="search" placeholder="Поиск...")#search   
+
+
+      main.main
+        .swiper
+        ul.main__ul-offer 
+          li.main__li-offer 
+            h2.main__offer-h2 Английский завтрак
+            p.main__offer-p-about Разговорный клуб
+            p.main__offer-p-date 10:00 — 11:00 (ПН—ПТ)
+            a(href="").main__offer-btn Записаться
+          
+          li.main__li-offer 
+            h2.main__offer-h2 Английский завтрак
+            p.main__offer-p-about Разговорный клуб
+            p.main__offer-p-date 10:00 — 11:00 (ПН—ПТ)
+            a(href="").main__offer-btn Записаться
+
+          li.main__li-offer 
+            h2.main__offer-h2 Английский завтрак
+            p.main__offer-p-about Разговорный клуб
+            p.main__offer-p-date 10:00 — 11:00 (ПН—ПТ)
+            a(href="").main__offer-btn Записаться
+
+        video(poster="./images/g.jpg" width="540" height="300").lesson-video
+          source(src="video.mp4" type="video/mp4")
+
+        .playlist
+          h2 Курс English A1
+            ul.playlist__items 
+              li.playlist__item
+
+        div.contacts 
+          h2 Контакты
+
+
+
+      footer.footer
+        p © 2020 
+        p Let’s Speak, языковая школа
+        p Сайт создан в HTML Academy
+
+  
+        
+
+      
+  script(src='./app.js')
+     
+
+    
+    
+
