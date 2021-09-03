@@ -24,10 +24,20 @@ body {
     grid-template-rows: 80px 1fr 100px;
 }
 
+@mixin boxShadow {
+    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
+}
+
+@mixin borderRadius {
+    border-radius: 4px;
+}
+
 .header {
     grid-row: 1/2;
     grid-column: 2/3;
     height: 80px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #B4BEF0;
 }
 
 .main {
@@ -38,6 +48,7 @@ body {
 .nav {
     grid-row: 1/3;
     grid-column: 1/2;
+    border-right: 1px solid #B4BEF0;
 }
 
 .container {
@@ -49,6 +60,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     padding: 24px 30px;
+    background-color: #FFFFFF;
 }
 
 .nav__li {
@@ -57,6 +69,10 @@ body {
 
 .nav__a {
     display: flex;
+
+    p {
+        font-weight: 300;
+    }
 }
 
 .nav__a--setting {
@@ -67,7 +83,7 @@ body {
 
 .main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 260px;
     grid-template-rows: 300px 140px 300px;
     gap: 20px;
     grid-template-areas:
@@ -78,10 +94,21 @@ body {
 }
 
 .swiper {
+    @include boxShadow;
     grid-area: s;
     background-image: url("../images/bb.jpg");
     background-repeat: no-repeat;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+}
+
+.swiper__btn {
+    background-color:  #FF8F0B;
+    border-radius: 4px;
+    padding: 10px 20px;
+    max-width: 170px;
 }
 
 .main__ul-offer {
@@ -92,6 +119,8 @@ body {
 }
 
 .main__li-offer {
+    @include boxShadow;
+    @include borderRadius;
     display: grid;
     background-color: #ffffff;
     padding: 20px 30px;
@@ -111,25 +140,41 @@ body {
 }
 
 .main__offer-btn {
+    @include boxShadow;
     justify-self: end;
     align-self: center;
     font-weight: 500;
     font-size: 16px;
     color: #576bcc;
-    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
 }
 
 .playlist {
     background: #FFFFFF;
     padding: 20px 30px;
+    @include boxShadow;
+    @include borderRadius;
 }
 
 /*contacts*/
 
 .contacts {
+    @include borderRadius;
     grid-area: c;
     background-color: #ffffff;
     padding: 20px 30px;
+    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
+}
+
+.contacts__a::before {
+    content: attr(data-text);
+    width: 40px;
+    height: 40px;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    color: #b4bef0;
+    background-color: #f1f3fe;
 }
 
 .contacts--h2 {
@@ -138,12 +183,25 @@ body {
     border-bottom: 1px solid #e4e8fc;
 }
 
+.contacts__ul {
+    border-top: 1px solid #E4E8FC;
+}
+
 .video {
     grid-area: v;
 }
 
+.lesson-video {
+    @include boxShadow;
+}
+
 .play-menu {
     grid-area: pm;
+}
+
+.h2-style {
+    font-weight: 500;
+    font-size: 18px;
 }
 
 /*footer*/
